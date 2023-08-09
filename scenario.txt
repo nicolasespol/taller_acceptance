@@ -1,0 +1,7 @@
+Scenario: Remove a task from the to-do list
+  Given the to-do list contains tasks:
+    | Task |
+    | Buy groceries |
+    | Pay bills |
+  When the user removes task "Buy groceries"
+  Then the to-do list should not contain "Buy groceries"
